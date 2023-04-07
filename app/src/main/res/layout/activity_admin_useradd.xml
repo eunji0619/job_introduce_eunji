@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminUserAdd"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_admin_useradd"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <TextView
+        android:id="@+id/tv_aduseradd_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용자 추가"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_background"/>
+
+    <TextView
+        android:id="@+id/tv_aduseradd_background"
+        android:layout_width="350dp"
+        android:layout_height="510dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/edittext_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_add" />
+
+    <TextView
+        android:id="@+id/tv_aduseradd_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="프로필"
+        android:textSize="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_background"
+        app:layout_constraintTop_toTopOf="@id/tv_aduseradd_background" />
+
+    <ImageView
+        android:id="@+id/iv_aduseradd_profil"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/ic_image"
+        app:layout_constraintTop_toTopOf="@id/tv_aduseradd_profil"
+        app:layout_constraintStart_toEndOf="@id/tv_aduseradd_profil"
+        app:layout_constraintEnd_toEndOf="@id/tv_aduseradd_background"/>
+
+    <TextView
+        android:id="@+id/tv_aduseradd_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_profil"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_profil"/>
+
+    <EditText
+        android:id="@+id/et_aduseradd_name"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@+id/tv_aduseradd_background"
+        app:layout_constraintStart_toStartOf="@+id/tv_aduseradd_background"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_name" />
+
+    <TextView
+        android:id="@+id/tv_aduseradd_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="휴대폰"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_profil"
+        app:layout_constraintTop_toBottomOf="@id/et_aduseradd_name"/>
+
+    <EditText
+        android:id="@+id/et_aduseradd_phone"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintStart_toStartOf="@id/et_aduseradd_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_phone"
+        app:layout_constraintEnd_toEndOf="@id/et_aduseradd_name"/>
+
+    <TextView
+        android:id="@+id/tv_aduseradd_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/et_aduseradd_phone"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_profil"/>
+
+    <EditText
+        android:id="@+id/et_aduseradd_email"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@+id/et_aduseradd_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_aduseradd_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_email" />
+
+    <TextView
+        android:id="@+id/tv_aduseradd_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/et_aduseradd_email"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_email"/>
+
+    <EditText
+        android:id="@+id/et_aduseradd_birth"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="YYYYMMDD (예.19980902)"
+        android:textSize="14dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_birth"
+        app:layout_constraintStart_toStartOf="@id/et_aduseradd_email"
+        app:layout_constraintEnd_toEndOf="@id/et_aduseradd_email"/>
+
+    <TextView
+        android:id="@+id/tv_aduseradd_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="성별"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/et_aduseradd_birth"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_profil"/>
+
+    <RadioGroup
+        android:id="@+id/rg_aduseradd_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_gender"
+        app:layout_constraintStart_toStartOf="@id/tv_aduseradd_background"
+        app:layout_constraintEnd_toEndOf="@id/tv_aduseradd_background">
+
+        <RadioButton
+            android:id="@+id/rb_aduseradd_male"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="남성"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/rb_aduseradd_female"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="여성"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_adaduseradd_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/a_tempcolor_btn2"
+        android:text="등록 하기"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_aduseradd_background"
+        app:layout_constraintStart_toStartOf="@+id/tv_aduseradd_background"
+        app:layout_constraintTop_toBottomOf="@id/tv_aduseradd_background" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

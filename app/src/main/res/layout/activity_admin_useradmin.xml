@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminUser"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_admin_useradd"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <Button
+        android:id="@+id/bt_aduser_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전체"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_aduser_general"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_aduser_general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일반회원"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/bt_aduser_adver"
+        app:layout_constraintStart_toEndOf="@id/bt_aduser_total"
+        app:layout_constraintTop_toTopOf="@id/bt_aduser_total"/>
+
+    <Button
+        android:id="@+id/bt_aduser_adver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기업"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/bt_aduser_temp"
+        app:layout_constraintStart_toEndOf="@id/bt_aduser_general"
+        app:layout_constraintTop_toTopOf="@id/bt_aduser_total"/>
+
+    <Button
+        android:id="@+id/bt_aduser_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="임시"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_aduser_adver"
+        app:layout_constraintTop_toTopOf="@id/bt_aduser_total" />
+
+    <Button
+        android:id="@+id/bt_aduser_restric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정제한"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_aduser_stop"
+        app:layout_constraintStart_toEndOf="@+id/bt_aduser_total"
+        app:layout_constraintTop_toBottomOf="@id/bt_aduser_total" />
+
+    <Button
+        android:id="@+id/bt_aduser_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정정지"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_aduser_temp"
+        app:layout_constraintStart_toEndOf="@id/bt_aduser_restric"
+        app:layout_constraintTop_toBottomOf="@id/bt_aduser_total" />
+
+    <EditText
+        android:id="@+id/et_aduser_search"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@drawable/edittext_border"
+        android:hint="\t 사용자 검색"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="@id/bt_aduser_temp"
+        app:layout_constraintStart_toStartOf="@+id/bt_aduser_total"
+        app:layout_constraintTop_toBottomOf="@id/bt_aduser_restric" />
+
+    <ImageButton
+        android:id="@+id/iv_aduser_search"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitCenter"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        app:srcCompat="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="@id/et_aduser_search"
+        app:layout_constraintTop_toTopOf="@id/et_aduser_search"/>
+
+    <CheckBox
+        android:id="@+id/cb_aduser_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/et_aduser_search"
+        app:layout_constraintStart_toStartOf="@id/et_aduser_search"
+        />
+
+    <TextView
+        android:id="@+id/tv_aduser_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:layout_marginLeft="15dp"
+        android:textSize="16dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toEndOf="@id/cb_aduser_check"
+        app:layout_constraintTop_toBottomOf="@id/et_aduser_search"/>
+
+    <TextView
+        android:id="@+id/tv_aduser_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="34dp"
+        android:text="계정"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@id/tv_aduser_name"
+        app:layout_constraintTop_toBottomOf="@id/et_aduser_search" />
+
+    <TextView
+        android:id="@+id/tv_aduser_authority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="34dp"
+        android:text="권한"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_aduser_account"
+        app:layout_constraintTop_toBottomOf="@id/et_aduser_search" />
+
+    <View
+        android:id="@+id/v_aduser_line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="@id/et_aduser_search"
+        app:layout_constraintStart_toStartOf="@id/et_aduser_search"
+        app:layout_constraintTop_toBottomOf="@id/cb_aduser_check" />
+
+    <ListView
+        android:id="@+id/lv_aduser_list"
+        android:layout_width="380dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/et_aduser_search"
+        app:layout_constraintStart_toStartOf="@id/et_aduser_search"
+        app:layout_constraintTop_toBottomOf="@id/cb_aduser_check" />
+
+    <View
+        android:id="@+id/v_aduser_line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="@id/et_aduser_search"
+        app:layout_constraintStart_toStartOf="@id/et_aduser_search"
+        app:layout_constraintTop_toBottomOf="@id/lv_aduser_list" />
+
+    <Button
+        android:id="@+id/bt_aduser_delete"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="선택 삭제"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/lv_aduser_list"
+        app:layout_constraintStart_toStartOf="@id/cb_aduser_check"
+        app:layout_constraintEnd_toStartOf="@id/bt_aduser_add"/>
+
+    <Button
+        android:id="@+id/bt_aduser_add"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="사용자 추가"
+        android:textSize="16dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/bt_aduser_delete"
+        app:layout_constraintStart_toEndOf="@id/bt_aduser_delete"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

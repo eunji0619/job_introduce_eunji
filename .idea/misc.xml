@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_border.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_border2.xml" value="0.1785" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_bordercolor.xml" value="0.1785" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_btn.xml" value="0.1785" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_btn2.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_btn3.xml" value="0.1525" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/a_tempcolor_compselect.xml" value="0.1375" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/change_checkbox.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/company_border.xml" value="0.1785" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/company_btn.xml" value="0.1785" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge3.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_border.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_border_color.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_dupchk.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_join.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_purple_circle.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_sq_border.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_stroke.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edge_top_border.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edit_under_border.xml" value="0.143" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/edittext_border.xml" value="0.1525" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/gray_cancelbtn.xml" value="0.21" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/ic_check_box.xml" value="0.211" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/ic_em_check_box.xml" value="0.211" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/ic_point.xml" value="0.1445" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/no_choice_btn.xml" value="0.1785" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/selector_checked.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/spinner_border.xml" value="0.209" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/temporary_color.xml" value="0.1265" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/test.xml" value="0.152" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/drawable/under_border.xml" value="0.143" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/a_jointest.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/a_testxml.xml" value="0.22" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_company_info.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_company_loc_info.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_company_login.xml" value="0.22" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_general_login.xml" value="0.22" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_helper_info.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_helper_list.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_helper_regi.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_jobpost.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_join.xml" value="0.22" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_main.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_modify_information.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_mypage.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_notice.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_notice_listview.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_open_list.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_open_regi.xml" value="0.24046740467404673" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_partnership_inquiry.xml" value="0.25" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_search.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_seeker_info.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_seeker_list.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_seeker_regi.xml" value="0.22" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_service.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_start.xml" value="0.2" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/activity_test.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/fragment_refresh.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/fragment_scrap.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/layout/toolbar_main.xml" value="0.20364583333333333" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/mipmap-anydpi-v26/ic_google_logo.xml" value="0.152" />
+        <entry key="..\:/Program Files/AndroidProjects/job_introduce_local (1)/job_introduce_local/app/src/main/res/mipmap-anydpi-v26/ic_google_logo_round.xml" value="0.152" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/a_tempcolor_border2.xml" value="0.17685185185185184" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/a_tempcolor_btn.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/a_tempcolor_btn2.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/company_btn.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/edge5.xml" value="0.15555555555555556" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/login_btn_test.xml" value="0.17685185185185184" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/login_combtn_test.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/drawable/login_genbtn_test.xml" value="0.17685185185185184" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/a_testxml.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_admin_mainpage.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_admin_notice.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_admin_noticewrite.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_admin_useradd.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_admin_useradmin.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_company_info.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_company_login.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_companylogin_test.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_general_login.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_generallogin_test.xml" value="0.2046875" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_helper_info.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_helper_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_helper_regi.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_login_fragment_test.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_login_test.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_modify_information.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_mypage.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_notice.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/activity_seeker_regi.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/fragment_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/fragment_refresh.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/fragment_scrap.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/toolbar_admin_mainpage.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/toolbar_notice.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/toolbar_notice_write.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/job_introduce_recent/job_introduce_recent/app/src/main/res/layout/write_circle.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

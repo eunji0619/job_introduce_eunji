@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".generalUser.GeneralLoginActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_login_logo"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/templogo2" />
+
+    <TextView
+        android:id="@+id/tv_comLogin_generaluser"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/no_choice_btn"
+        android:text="일반 회원"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:clickable="true"
+        app:layout_constraintEnd_toStartOf="@+id/tv_comLogin_companyuser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_login_logo" />
+
+    <TextView
+        android:id="@+id/tv_comLogin_companyuser"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:text="기업 회원"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_comLogin_generaluser"
+        app:layout_constraintTop_toTopOf="@+id/tv_comLogin_generaluser"
+        android:background="@drawable/company_border"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="아이디"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comLogin_generaluser" />
+
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="비밀번호"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        android:layout_marginTop="5dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/et_id"
+        app:layout_constraintStart_toStartOf="@+id/et_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+
+    <Button
+        android:id="@+id/bt_company_login"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:text="로그인"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/et_pw"
+        app:layout_constraintStart_toStartOf="@+id/et_pw"
+        app:layout_constraintTop_toBottomOf="@+id/et_pw"
+        android:background="@drawable/company_btn"/>
+
+    <CheckBox
+        android:id="@+id/cb_autologin"
+        android:layout_width="104dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="15dp"
+        android:text="자동로그인"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/bt_company_login"
+        app:layout_constraintTop_toBottomOf="@+id/bt_company_login" />
+
+    <TextView
+        android:id="@+id/tv_searchid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textSize="15dp"
+        android:text="아이디 찾기"
+        app:layout_constraintStart_toStartOf="@+id/tv_comLogin_companyuser"
+        app:layout_constraintEnd_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/cb_autologin"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:text="|"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_searchid"
+        app:layout_constraintEnd_toStartOf="@+id/tv_searchpw"
+        app:layout_constraintTop_toTopOf="@+id/tv_searchid"/>
+
+    <TextView
+        android:id="@+id/tv_searchpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="비밀번호 찾기"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="@+id/bt_company_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_searchid"/>
+
+    <TextView
+        android:id="@+id/tv_description3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="계정이 없으세요?"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_comLogin_companyuser"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가입하기"
+        android:layout_marginStart="10dp"
+        android:textColor="#FF9800"
+        android:clickable="true"
+        android:onClick="nextLayout_join"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_description3"
+        app:layout_constraintTop_toTopOf="@+id/tv_description3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

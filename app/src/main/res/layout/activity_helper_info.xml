@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_helper_info"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:id="@+id/sv_seeker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <View
+                android:id="@+id/view_first"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_underview1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_seekertitle"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="가사 도우미 구합니다."
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/view_first"
+                app:layout_constraintTop_toTopOf="@+id/view_first" />
+
+
+            <ImageView
+                android:id="@+id/iv_scrap"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_empty_star"
+                app:layout_constraintEnd_toEndOf="@+id/view_first"
+                app:layout_constraintTop_toTopOf="@id/view_first" />
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_share"
+                app:layout_constraintEnd_toStartOf="@id/iv_scrap"
+                app:layout_constraintTop_toTopOf="@+id/iv_scrap" />
+
+            <LinearLayout
+                android:id="@+id/ll_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/under_border"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/view_first"
+                app:layout_constraintStart_toStartOf="@+id/view_first"
+                app:layout_constraintTop_toBottomOf="@+id/tv_seekertitle" />
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="구인자 정보"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/ll_line"
+                app:layout_constraintTop_toTopOf="@+id/ll_line" />
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:text="홍길동"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text1" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="40dp"
+                android:text="여성"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_textView1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="휴대폰"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_phonnum"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="010-1231-1233"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_first"
+                app:layout_constraintStart_toStartOf="@+id/tv_gender"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView1"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_textView2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="이메일"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView1" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="asdf@naver.com"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_phonnum"
+                app:layout_constraintStart_toStartOf="@+id/tv_phonnum"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView2"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_textView3"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="주소"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView2" />
+
+            <TextView
+                android:id="@+id/tv_addr"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="부산진구 가야동 11번길 1"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_email"
+                app:layout_constraintStart_toStartOf="@+id/tv_email"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView3"
+                tools:ignore="RtlCompat" />
+
+
+            <View
+                android:id="@+id/vi_underview1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/view_first"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/view_first"
+                app:layout_constraintTop_toBottomOf="@+id/tv_addr" />
+
+            <View
+                android:id="@+id/view_sec"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintBottom_toTopOf="@+id/vi_underview2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vi_underview1" />
+
+            <TextView
+                android:id="@+id/tv_textView6"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="희망 도우미 정보 및 근무 기간"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/view_sec"
+                app:layout_constraintTop_toTopOf="@+id/view_sec" />
+
+            <TextView
+                android:id="@+id/tv_textView7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="업종"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView6" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="가사도우미"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_sec"
+                app:layout_constraintStart_toEndOf="@+id/tv_textView7"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView7"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="기간"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView7" />
+
+            <TextView
+                android:id="@+id/tv_period"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="~ 2022.08.30"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_type"
+                app:layout_constraintStart_toEndOf="@+id/tv_text7"
+                app:layout_constraintTop_toTopOf="@+id/tv_text7"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_textView8"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="요일"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text7" />
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="평일 (월~금)"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_period"
+                app:layout_constraintStart_toStartOf="@+id/tv_period"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView8"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_textView9"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="시간"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView8" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="09:00 ~ 18:00"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_period"
+                app:layout_constraintStart_toStartOf="@+id/tv_period"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView9"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text9"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="경력"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView9" />
+
+            <TextView
+                android:id="@+id/tv_career"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="n년 이상"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_time"
+                app:layout_constraintStart_toStartOf="@+id/tv_time"
+                app:layout_constraintTop_toTopOf="@+id/tv_text9"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text10"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="급여"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text9" />
+
+            <TextView
+                android:id="@+id/tv_sal"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="시급 1만 원"
+                android:textAlignment="textStart"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_career"
+                app:layout_constraintStart_toStartOf="@+id/tv_career"
+                app:layout_constraintTop_toTopOf="@+id/tv_text10"
+                tools:ignore="RtlCompat" />
+
+
+            <View
+                android:id="@+id/vi_underview2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view_thir"
+                app:layout_constraintEnd_toEndOf="@+id/view_sec"
+                app:layout_constraintStart_toStartOf="@+id/view_sec"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sal" />
+
+            <View
+                android:id="@+id/view_thir"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintTop_toBottomOf="@id/vi_underview2"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_underview3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_textView10"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="상세 내용"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/view_thir"
+                app:layout_constraintTop_toTopOf="@+id/view_thir" />
+
+            <TextView
+                android:id="@+id/more_information"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:scrollHorizontally="false"
+                android:text="내용 출력"
+                android:inputType="textMultiLine"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_thir"
+                app:layout_constraintStart_toStartOf="@id/tv_textView10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView10" />
+
+            <View
+                android:id="@+id/vi_underview3"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/view_thir"
+                app:layout_constraintStart_toStartOf="@+id/view_thir"
+                app:layout_constraintTop_toBottomOf="@+id/more_information"
+                app:layout_constraintBottom_toTopOf="@+id/view_four"/>
+
+            <View
+                android:id="@+id/view_four"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintTop_toBottomOf="@id/vi_underview3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/bt_offer"/>
+
+
+            <TextView
+                android:id="@+id/tv_textView13"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="연락 가능 시간"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/view_four"
+                app:layout_constraintTop_toTopOf="@+id/view_four" />
+
+            <!--
+                후에 이거 개발할때 밑에꺼 없애고 동적으로 생성하는게 나을거같음
+            -->
+            <TextView
+                android:id="@+id/tv_eveytime"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/a_tempcolor_bordercolor"
+                android:text="종일"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/tv_morning"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView13" />
+            <TextView
+                android:id="@+id/tv_morning"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/a_tempcolor_bordercolor"
+                android:text="오전"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/tv_lunch"
+                app:layout_constraintStart_toEndOf="@+id/tv_eveytime"
+                app:layout_constraintTop_toTopOf="@+id/tv_eveytime" />
+            <TextView
+                android:id="@+id/tv_lunch"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/a_tempcolor_bordercolor"
+                android:text="점심"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/tv_after"
+                app:layout_constraintStart_toEndOf="@+id/tv_morning"
+                app:layout_constraintTop_toTopOf="@+id/tv_morning" />
+            <TextView
+                android:id="@+id/tv_after"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/a_tempcolor_bordercolor"
+                android:text="오후"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/tv_evening"
+                app:layout_constraintStart_toEndOf="@+id/tv_lunch"
+                app:layout_constraintTop_toTopOf="@+id/tv_lunch" />
+            <TextView
+                android:id="@+id/tv_evening"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/a_tempcolor_bordercolor"
+                android:text="저녁"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/more_information"
+                app:layout_constraintStart_toEndOf="@+id/tv_after"
+                app:layout_constraintTop_toTopOf="@+id/tv_after"/>
+
+            <Button
+                android:id="@+id/bt_offer"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/a_tempcolor_btn"
+                android:text="제의하기"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_four" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

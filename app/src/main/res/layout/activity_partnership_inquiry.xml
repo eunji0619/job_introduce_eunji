@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".partnership.PartnershipInquiryActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_partnership_inquiry"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/tv_partnership"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제휴문의 등록 *"
+                android:layout_marginTop="20dp"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_des1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(*) 필수 입력 항목"
+                android:textSize="13dp"
+                android:textColor="#FF0000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_partnership" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="제목"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_partnership"
+                app:layout_constraintTop_toBottomOf="@+id/tv_partnership" />
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:textSize="13dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_des1"
+                app:layout_constraintStart_toEndOf="@+id/tv_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="카테고리"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <RadioGroup
+                android:id="@+id/rg_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/et_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_category"
+                app:layout_constraintTop_toBottomOf="@+id/tv_category">
+
+                <RadioButton
+                    android:id="@+id/rb_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="서비스"
+                    android:textSize="13dp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/rb_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="비지니스"
+                    android:textSize="13dp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/rb_maketing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="마케팅"
+                    android:textSize="13dp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/rb_publicservice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="공익사업"
+                    android:textSize="13dp"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_attachproposal"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="제안서첨부"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/rg_category"
+                app:layout_constraintTop_toBottomOf="@+id/rg_category" />
+
+            <EditText
+                android:id="@+id/et_attachproposal"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_des1"
+                app:layout_constraintStart_toStartOf="@+id/tv_attachproposal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_attachproposal" />
+
+
+            <TextView
+                android:id="@+id/tv_cominfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="제휴제안 업체정보 *"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_partnership"
+                app:layout_constraintTop_toBottomOf="@+id/et_attachproposal" />
+
+            <TextView
+                android:id="@+id/tv_comname"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="회사명"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/et_attachproposal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cominfo" />
+
+            <EditText
+                android:id="@+id/et_comname"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_under_border"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_attachproposal"
+                app:layout_constraintStart_toStartOf="@+id/et_proposer"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cominfo" />
+
+            <TextView
+                android:id="@+id/tv_proposer"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="제안자명"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_comname"
+                app:layout_constraintTop_toBottomOf="@+id/tv_comname" />
+
+            <EditText
+                android:id="@+id/et_proposer"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edit_under_border"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_des1"
+                app:layout_constraintStart_toEndOf="@+id/tv_proposer"
+                app:layout_constraintTop_toTopOf="@+id/tv_proposer" />
+
+            <TextView
+                android:id="@+id/tv_pphone"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="전화번호"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_proposer"
+                app:layout_constraintTop_toBottomOf="@+id/tv_proposer" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:spinnerMode="dropdown"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_proposer"
+                app:layout_constraintStart_toStartOf="@+id/et_proposer"
+                app:layout_constraintTop_toTopOf="@+id/tv_pphone" />
+
+
+            <TextView
+                android:id="@+id/tv_pemail"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="메일주소"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_pphone"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pphone" />
+
+            <EditText
+                android:id="@+id/et_pemail"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_des1"
+                app:layout_constraintStart_toStartOf="@+id/et_phone"
+                app:layout_constraintTop_toTopOf="@+id/tv_pemail" />
+
+            <TextView
+                android:id="@+id/tv_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="[필수] 개인정보 수집 및 이용 동의"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_cominfo"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pemail" />
+
+
+            <TextView
+                android:id="@+id/tv_des2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="아래의 목적으로 개인정보를 수집 및 이용하며,\n회원의 개인정보를 안전하게 취급하는데 최선을 다합니다."
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_agree"
+                app:layout_constraintTop_toBottomOf="@+id/tv_agree" />
+
+            <TextView
+                android:id="@+id/tv_des3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white_gray"
+                android:text="@string/agree_des"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_des2"
+                app:layout_constraintStart_toStartOf="@+id/tv_des2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_des2"/>
+
+            <CheckBox
+                android:id="@+id/rb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개인정보 수집 및 이용에 동의합니다."
+                android:textSize="12dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/bt_cancel"
+                app:layout_constraintTop_toBottomOf="@+id/tv_des3" />
+
+            <Button
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:text="취소하기"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:background="@drawable/a_tempcolor_btn3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bt_register"/>
+
+            <Button
+                android:id="@+id/bt_register"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@drawable/a_tempcolor_btn2"
+                android:text="등록하기"
+                android:textSize="15dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_cancel"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

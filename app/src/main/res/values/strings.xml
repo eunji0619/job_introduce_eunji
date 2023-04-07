@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">job_introduce</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agree_des"> 1. 목적 : 제휴 제안에 따른 연락처 정보 확인\n
+        2. 항목 : 회사(기관)명, 제안자명, 전화번호, 메일주소\n
+        3. 보유기간 : 제휴 제안 사항 상담서비스를 위해 제안 등록 후 90일간 보관하며,\n이후 해당 정보를 지체 없이 파기합니다.\n\n
+        단, 제휴 제안의 기각 및 거절시에는 해당 정보는 즉시 파기합니다.\n\n위 정보 수집에 대한 동의를 거부할 권리가 있으며, \n동의 거부 시에는 제휴 제안 접수가 제한될 수 있습니다."</string>
+</resources>

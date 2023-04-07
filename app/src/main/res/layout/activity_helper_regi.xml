@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_helper_regi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:id="@+id/sv_regist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tv_textView1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:text="제목*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_textView2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="(*) 필수 입력항목"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView1" />
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/edit_under_border"
+                app:layout_constraintEnd_toEndOf="@+id/tv_textView2"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView1" />
+
+
+            <TextView
+                android:id="@+id/tv_textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="개인 정보*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/et_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
+            <View
+                android:id="@+id/vi_userinfo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edge_border"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_viewbottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView3" />
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="이름"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/vi_userinfo"
+                app:layout_constraintTop_toTopOf="@+id/vi_userinfo" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_under_border"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/vi_userinfo"
+                app:layout_constraintStart_toEndOf="@+id/tv_text1"
+                app:layout_constraintTop_toTopOf="@+id/vi_userinfo" />
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="성별"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text1"
+                app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/et_name"
+                app:layout_constraintStart_toEndOf="@+id/tv_text2"
+                app:layout_constraintStart_toStartOf="@+id/et_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_text2">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="남성"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="여성"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_text3"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="주소"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text2"
+                app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
+
+            <!-- 시/도 선택 -->
+            <Spinner
+                android:id="@+id/sp_area"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/SpinnerTheme"
+                android:verticalScrollbarPosition="right"
+                android:scrollbarThumbVertical="@drawable/spinner_scrollbar"
+                android:scrollbarFadeDuration = "0"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarDefaultDelayBeforeFade="500000"
+                android:background="@drawable/edge_border"
+                app:layout_constraintEnd_toStartOf="@+id/sp_area2"
+                app:layout_constraintStart_toStartOf="@+id/et_name"
+                app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
+
+            <!-- 구/교 선택 -->
+            <Spinner
+                android:id="@+id/sp_area2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:spinnerMode="dropdown"
+                android:layout_marginStart="5dp"
+                android:theme="@style/SpinnerTheme"
+                android:verticalScrollbarPosition="right"
+                android:scrollbarThumbVertical="@drawable/spinner_scrollbar"
+                android:background="@drawable/edge_border"
+                app:layout_constraintEnd_toEndOf="@+id/rg_gender"
+                app:layout_constraintStart_toEndOf="@id/sp_area"
+                app:layout_constraintTop_toTopOf="@+id/sp_area" />
+
+            <TextView
+                android:id="@+id/tv_text4"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="휴대폰"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text3" />
+
+            <Spinner
+                android:id="@+id/sp_phone1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/edit_under_border"
+                app:layout_constraintStart_toStartOf="@+id/sp_area"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text5"
+                app:layout_constraintTop_toTopOf="@+id/tv_text4" />
+
+            <TextView
+                android:id="@+id/tv_text5"
+                android:layout_width="15dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/et_phone11"
+                app:layout_constraintStart_toEndOf="@+id/sp_phone1"
+                app:layout_constraintTop_toTopOf="@+id/tv_text4" />
+
+            <EditText
+                android:id="@+id/et_phone11"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:maxLength="4"
+                app:layout_constraintStart_toEndOf="@+id/tv_text5"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text6"
+                app:layout_constraintTop_toTopOf="@+id/tv_text5" />
+
+            <TextView
+                android:id="@+id/tv_text6"
+                android:layout_width="15dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/et_phone11"
+                app:layout_constraintEnd_toStartOf="@+id/et_phone12"
+                app:layout_constraintTop_toTopOf="@+id/et_phone11" />
+
+            <EditText
+                android:id="@+id/et_phone12"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/sp_area2"
+                app:layout_constraintStart_toEndOf="@+id/tv_text6"
+                app:layout_constraintTop_toTopOf="@+id/tv_text6" />
+
+            <TextView
+                android:id="@+id/tv_text7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="이메일"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text4" />
+
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:textSize="16dp"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_phone12"
+                app:layout_constraintStart_toStartOf="@id/sp_phone1"
+                app:layout_constraintTop_toTopOf="@+id/tv_text7" />
+
+            <View
+                android:id="@+id/vi_viewbottom"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@id/vi_userinfo"
+                app:layout_constraintStart_toStartOf="@id/vi_userinfo"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+            <TextView
+                android:id="@+id/tv_textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="희망 근무 지역*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/vi_viewbottom"
+                app:layout_constraintTop_toBottomOf="@+id/vi_viewbottom" />
+
+            <TextView
+                android:id="@+id/tv_textView6"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="주소"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView5" />
+
+            <!-- 시/도 선택 -->
+            <Spinner
+                android:id="@+id/sp_hopearea"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_under_border"
+                app:layout_constraintEnd_toStartOf="@+id/sp_hopearea2"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView6" />
+
+            <!-- 구/교 선택 -->
+            <Spinner
+                android:id="@+id/sp_hopearea2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edit_under_border"
+                app:layout_constraintEnd_toEndOf="@+id/vi_viewbottom"
+                app:layout_constraintStart_toEndOf="@id/sp_hopearea"
+                app:layout_constraintTop_toTopOf="@+id/sp_hopearea" />
+
+            <TextView
+                android:id="@+id/tv_textView7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="상세 주소"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/sp_hopearea"
+                app:layout_constraintTop_toBottomOf="@+id/sp_hopearea" />
+
+            <EditText
+                android:id="@+id/et_hopeaddr"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_under_border"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/sp_hopearea2"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView7" />
+
+            <TextView
+                android:id="@+id/tv_textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="희망 근무 업종*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView5"
+                app:layout_constraintTop_toBottomOf="@+id/et_hopeaddr" />
+
+            <TextView
+                android:id="@+id/tv_textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="경력*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView8" />
+
+            <RadioGroup
+                android:id="@+id/rg_choice_career"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/et_write_ex"
+                app:layout_constraintStart_toStartOf="@+id/et_hopeaddr"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView9">
+
+                <RadioButton
+                    android:id="@+id/rb_nocareer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="경력 무관"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_career"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="경력"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_write_ex"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edge_border"
+                android:inputType="number"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="@+id/et_hopeaddr"
+                app:layout_constraintStart_toEndOf="@+id/rg_choice_career"
+                app:layout_constraintTop_toTopOf="@+id/rg_choice_career" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="년 이상"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/et_write_ex"
+                app:layout_constraintTop_toTopOf="@+id/et_write_ex" />
+
+            <TextView
+                android:id="@+id/tv_textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="급여*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView9"
+                app:layout_constraintTop_toBottomOf="@+id/rg_choice_career" />
+
+            <RadioGroup
+                android:id="@+id/rg_sal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/et_write_ex"
+                app:layout_constraintStart_toStartOf="@+id/rg_choice_career"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView10">
+
+                <RadioButton
+                    android:id="@+id/rb_hourly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="시급"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_everyday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="일급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="주급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_monthly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="월급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/rg_sal"
+                app:layout_constraintStart_toStartOf="@+id/rg_sal"
+                app:layout_constraintTop_toBottomOf="@+id/rg_sal" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="원"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/et_amount"
+                app:layout_constraintTop_toTopOf="@+id/et_amount" />
+
+            <TextView
+                android:id="@+id/tv_textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="희망 근무 기간*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView10"
+                app:layout_constraintTop_toBottomOf="@+id/et_amount" />
+
+            <TextView
+                android:id="@+id/tv_hopeworkdate"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_under_border"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_textView23"
+                app:layout_constraintStart_toStartOf="@+id/et_amount"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView11"/>
+
+            <TextView
+                android:id="@+id/tv_textView23"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="~"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_hopeworkdate"
+                app:layout_constraintTop_toTopOf="@+id/tv_hopeworkdate"
+                app:layout_constraintEnd_toStartOf="@+id/tv_endworkdate"/>
+
+            <TextView
+                android:id="@+id/tv_endworkdate"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_amount"
+                app:layout_constraintStart_toEndOf="@+id/tv_textView23"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView23" />
+
+            <TextView
+                android:id="@+id/tv_textView12"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="희망 근무 요일*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView11"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hopeworkdate" />
+
+
+            <CheckBox
+                android:id="@+id/cb_weekday"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="평일"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cb_weekend"
+                app:layout_constraintStart_toStartOf="@id/tv_hopeworkdate"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView12" />
+
+            <CheckBox
+                android:id="@+id/cb_weekend"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="주말"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/et_amount"
+                app:layout_constraintStart_toEndOf="@id/cb_weekday"
+                app:layout_constraintTop_toTopOf="@+id/cb_weekday" />
+
+            <CheckBox
+                android:id="@+id/cb_mon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="월"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/cb_weekday"
+                app:layout_constraintTop_toBottomOf="@id/cb_weekday" />
+
+            <CheckBox
+                android:id="@+id/cb_tue"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="화"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cb_wed"
+                app:layout_constraintStart_toEndOf="@id/cb_mon"
+                app:layout_constraintTop_toTopOf="@id/cb_mon" />
+
+            <CheckBox
+                android:id="@+id/cb_wed"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="수"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_thu"
+                app:layout_constraintStart_toEndOf="@+id/cb_tue"
+                app:layout_constraintTop_toTopOf="@id/cb_tue" />
+
+            <CheckBox
+                android:id="@+id/cb_thu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="목"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_fri"
+                app:layout_constraintStart_toEndOf="@id/cb_wed"
+                app:layout_constraintTop_toTopOf="@id/cb_wed" />
+
+            <CheckBox
+                android:id="@+id/cb_fri"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="금"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_sat"
+                app:layout_constraintStart_toEndOf="@+id/cb_thu"
+                app:layout_constraintTop_toTopOf="@id/cb_thu" />
+
+            <CheckBox
+                android:id="@+id/cb_sat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="토"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_sun"
+                app:layout_constraintStart_toEndOf="@+id/cb_fri"
+                app:layout_constraintTop_toTopOf="@id/cb_fri" />
+
+            <CheckBox
+                android:id="@+id/cb_sun"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="일"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cb_weekend"
+                app:layout_constraintStart_toEndOf="@id/cb_sat"
+                app:layout_constraintTop_toTopOf="@id/cb_sat" />
+
+
+            <TextView
+                android:id="@+id/tv_textView13"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="희망 근무 시간*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView12"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mon" />
+
+            <!--시작 시간-->
+            <Spinner
+                android:id="@+id/sp_starttime"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/SpinnerTheme"
+                android:verticalScrollbarPosition="right"
+                android:scrollbarThumbVertical="@drawable/spinner_scrollbar"
+                android:scrollbarFadeDuration = "0"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarDefaultDelayBeforeFade="500000"
+                android:background="@drawable/edge_border"
+                app:layout_constraintEnd_toStartOf="@id/tv_text16"
+                app:layout_constraintStart_toStartOf="@+id/cb_mon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView13" />
+
+
+            <TextView
+                android:id="@+id/tv_text16"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="~"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/sp_endtime"
+                app:layout_constraintStart_toEndOf="@+id/sp_starttime"
+                app:layout_constraintTop_toTopOf="@+id/sp_starttime" />
+
+            <!--종료 시간-->
+            <Spinner
+                android:id="@+id/sp_endtime"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/SpinnerTheme"
+                android:verticalScrollbarPosition="right"
+                android:scrollbarThumbVertical="@drawable/spinner_scrollbar"
+                android:scrollbarFadeDuration = "0"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarDefaultDelayBeforeFade="500000"
+                android:background="@drawable/edge_border"
+                app:layout_constraintEnd_toEndOf="@id/cb_sun"
+                app:layout_constraintStart_toEndOf="@+id/tv_text16"
+                app:layout_constraintTop_toTopOf="@+id/tv_text16" />
+
+            <TextView
+                android:id="@+id/tv_textView14"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="연락 가능 시간*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView13"
+                app:layout_constraintTop_toBottomOf="@+id/sp_starttime" />
+
+            <CheckBox
+                android:id="@+id/cb_allday"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="종일"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cb_morning"
+                app:layout_constraintStart_toStartOf="@+id/sp_starttime"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView14" />
+
+            <CheckBox
+                android:id="@+id/cb_morning"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="오전"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cb_lunch"
+                app:layout_constraintStart_toEndOf="@+id/cb_allday"
+                app:layout_constraintTop_toTopOf="@+id/cb_allday" />
+
+            <CheckBox
+                android:id="@+id/cb_lunch"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="점심"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/sp_endtime"
+                app:layout_constraintStart_toEndOf="@+id/cb_morning"
+                app:layout_constraintTop_toTopOf="@+id/cb_morning" />
+
+            <CheckBox
+                android:id="@+id/cb_afternoon"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="오후"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cb_allday"
+                app:layout_constraintStart_toStartOf="@+id/cb_allday"
+                app:layout_constraintTop_toBottomOf="@+id/cb_allday" />
+
+            <CheckBox
+                android:id="@+id/cb_dinner"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="저녁"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cb_morning"
+                app:layout_constraintStart_toStartOf="@+id/cb_morning"
+                app:layout_constraintTop_toBottomOf="@+id/cb_morning" />
+
+
+            <TextView
+                android:id="@+id/tv_textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="상세 정보*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView13"
+                app:layout_constraintTop_toBottomOf="@+id/cb_afternoon" />
+
+            <EditText
+                android:id="@+id/et_detaile_info"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                android:textSize="16dp"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/sp_endtime"
+                app:layout_constraintStart_toStartOf="@+id/cb_afternoon"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView15" />
+
+            <Button
+                android:id="@+id/bt_imagechoice"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                android:text="이미지 선택"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@+id/et_detaile_info"
+                app:layout_constraintTop_toBottomOf="@id/et_detaile_info" />
+
+
+            <TextView
+                android:id="@+id/tv_textView16"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:text="구직 등록 기간*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView15"
+                app:layout_constraintTop_toBottomOf="@+id/bt_imagechoice" />
+
+            <RadioGroup
+                android:id="@+id/rg_regist_period"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/tv_textView16"
+                app:layout_constraintTop_toBottomOf="@id/tv_textView16"
+                app:layout_constraintEnd_toEndOf="@+id/et_detaile_info">
+
+                <RadioButton
+                    android:id="@+id/rb_oneweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="1주"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_twoweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="2주"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_threeweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="3주"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_onemonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="1개월"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_choiceday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="날짜선택"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_calchoice"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/rg_regist_period"
+                app:layout_constraintEnd_toEndOf="@+id/rg_regist_period"
+                app:layout_constraintTop_toBottomOf="@+id/rg_regist_period"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_regi_period"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:textSize="16dp"
+                    android:background="@drawable/edit_under_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bt_regist_period"/>
+
+                <Button
+                    android:id="@+id/bt_regist_period"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_calendar"
+                    app:layout_constraintStart_toEndOf="@+id/tv_regi_period"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_regi_period"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/bt_helper_regist"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/a_tempcolor_btn"
+                android:text="등록하기"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_calchoice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

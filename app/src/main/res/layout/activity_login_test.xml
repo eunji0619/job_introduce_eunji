@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@color/white"
+    tools:context=".login_test">
+
+    <ImageView
+        android:id="@+id/iv_login_logo"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/templogo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_generaluser_t"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/a_tempcolor_border2"
+        android:gravity="center"
+        android:text="일반 회원"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_companyuser_t"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_login_logo" />
+
+    <Button
+        android:id="@+id/btn_companyuser_t"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:text="기업 회원"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_generaluser_t"
+        app:layout_constraintTop_toTopOf="@+id/btn_generaluser_t"
+        android:clickable="true"
+        android:onClick="nextLayout_comLogin"
+        android:background="@drawable/no_choice_btn"/>
+
+    <fragment
+        android:id="@+id/fragment_layout"
+        android:name="com.example.job_introduce.generallogin_test"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_companyuser_t"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_generaluser_t"
+        app:layout_constraintTop_toBottomOf="@+id/btn_generaluser_t" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

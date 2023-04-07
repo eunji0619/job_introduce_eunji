@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_my_info"
+        android:enabled="true"
+        android:title="마이페이지"
+        android:icon="@drawable/ic_person"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_notice"
+        android:enabled="true"
+        android:title="공지사항"
+        android:icon="@drawable/ic_notice"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_scrap"
+        android:enabled="true"
+        android:title="스크랩"
+        android:icon="@drawable/ic_star"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_policy"
+        android:enabled="true"
+        android:title="약관및정책"
+        android:icon="@drawable/ic_policy"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_service_center"
+        android:enabled="true"
+        android:title="고객센터"
+        android:icon="@drawable/ic_service"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_logout"
+        android:enabled="true"
+        android:title="로그아웃"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always"/>
+</menu>

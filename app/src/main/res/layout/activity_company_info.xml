@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_company_info"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <TextView
+        android:id="@+id/tv_draw"
+        android:layout_width="350dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edge_white_round_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+    <TextView
+        android:id="@+id/tv_cominfo_comname"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="기업명"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/tv_draw"
+        app:layout_constraintStart_toStartOf="@id/tv_draw" />
+
+    <EditText
+        android:id="@+id/et_cominfo_comname"
+        android:layout_width="230dp"
+        android:layout_height="35dp"
+        android:hint="기업명"
+        android:textSize="15dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintStart_toEndOf="@id/tv_cominfo_comname"
+        app:layout_constraintTop_toTopOf="@id/tv_cominfo_comname"
+        app:layout_constraintEnd_toEndOf="@id/tv_draw"/>
+
+    <TextView
+        android:id="@+id/tv_cominfo_comtype"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="기업 형태"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@id/tv_cominfo_comname"
+        app:layout_constraintTop_toBottomOf="@id/tv_cominfo_comname"/>
+
+    <RadioGroup
+        android:id="@+id/rg_cominfo_comtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_cominfo_comtype"
+        app:layout_constraintStart_toStartOf="@id/tv_draw"
+        app:layout_constraintEnd_toEndOf="@id/tv_draw">
+
+        <RadioButton
+            android:id="@+id/rb_cominfo_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대기업"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/rb_cominfo_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="중견기업"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/rb_cominfo_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중소기업"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/rb_cominfo_indivi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_cominfo_comarea"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="주소"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_cominfo_comname"
+        app:layout_constraintTop_toBottomOf="@id/rg_cominfo_comtype"/>
+
+    <EditText
+        android:id="@+id/et_cominfo_comarea"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:hint="  주소"
+        android:textSize="14dp"
+        android:paddingStart="5dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@+id/et_cominfo_comname"
+        app:layout_constraintStart_toStartOf="@id/et_cominfo_comname"
+        app:layout_constraintTop_toTopOf="@id/tv_cominfo_comarea" />
+
+    <EditText
+        android:id="@+id/et_cominfo_comdetail"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="5dp"
+        android:background="@drawable/edit_under_border"
+        android:hint="  상세주소"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_cominfo_comname"
+        app:layout_constraintStart_toStartOf="@id/et_cominfo_comname"
+        app:layout_constraintTop_toBottomOf="@id/et_cominfo_comarea" />
+
+    <TextView
+        android:id="@+id/tv_cominfo_representname"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="대표자명"
+        android:textSize="15dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="@id/tv_cominfo_comname"
+        app:layout_constraintTop_toBottomOf="@id/tv_cominfo_comarea" />
+
+    <EditText
+        android:id="@+id/et_cominfo_representname"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@id/et_cominfo_comname"
+        app:layout_constraintStart_toStartOf="@id/et_cominfo_comname"
+        app:layout_constraintTop_toTopOf="@id/tv_cominfo_representname" />
+
+    <TextView
+        android:id="@+id/tv_cominfo_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="전화번호"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_cominfo_comname"
+        app:layout_constraintTop_toBottomOf="@id/tv_cominfo_representname"/>
+
+    <Spinner
+        android:id="@+id/sp_cominfo_spinphone"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:text="010"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintStart_toStartOf="@id/et_cominfo_comname"
+        app:layout_constraintEnd_toStartOf="@+id/tv_des1"
+        app:layout_constraintTop_toTopOf="@id/tv_cominfo_phone"
+        android:visibility="visible"/>
+
+    <EditText
+        android:id="@+id/et_cominfo_strphone"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="010"
+        android:maxLength="3"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintStart_toStartOf="@id/et_cominfo_comname"
+        app:layout_constraintEnd_toStartOf="@+id/tv_des1"
+        app:layout_constraintTop_toTopOf="@id/tv_cominfo_phone"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_des1"
+        android:layout_width="15dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="-"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/sp_cominfo_spinphone"
+        app:layout_constraintTop_toTopOf="@id/sp_cominfo_spinphone"
+        app:layout_constraintEnd_toStartOf="@+id/et_cominfo_midphone"/>
+
+    <EditText
+        android:id="@+id/et_cominfo_midphone"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:maxLength="4"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toStartOf="@id/tv_des2"
+        app:layout_constraintStart_toEndOf="@id/tv_des1"
+        app:layout_constraintTop_toTopOf="@+id/sp_cominfo_spinphone" />
+
+    <TextView
+        android:id="@+id/tv_des2"
+        android:layout_width="15dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="-"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/et_cominfo_midphone"
+        app:layout_constraintTop_toTopOf="@id/sp_cominfo_spinphone"
+        app:layout_constraintEnd_toStartOf="@+id/et_cominfo_endphone"/>
+
+    <EditText
+        android:id="@+id/et_cominfo_endphone"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:maxLength="4"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@id/et_cominfo_comname"
+        app:layout_constraintStart_toEndOf="@id/tv_des2"
+        app:layout_constraintTop_toTopOf="@+id/et_cominfo_midphone" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="사원 수"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_cominfo_comname"
+        app:layout_constraintTop_toBottomOf="@id/tv_cominfo_phone"/>
+
+    <EditText
+        android:id="@+id/et_cominfo_employeenum"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:textSize="14dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@id/et_cominfo_comname"
+        app:layout_constraintStart_toStartOf="@id/et_cominfo_comname"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+    <Button
+        android:id="@+id/bt_cominfo_cancel"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="취소하기"
+        android:textSize="17dp"
+        android:background="@drawable/gray_cancelbtn"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_cominfo_modi"/>
+
+    <Button
+        android:id="@+id/bt_cominfo_modi"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="수정하기"
+        android:textSize="17dp"
+        android:background="@drawable/a_tempcolor_btn2"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/bt_cominfo_cancel"
+        app:layout_constraintTop_toTopOf="@id/bt_cominfo_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/bt_cominfo_cancel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

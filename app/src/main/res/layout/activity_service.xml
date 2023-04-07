@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include_service"
+        layout="@layout/toolbar_service"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:id="@+id/sv_service"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/include_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/tv_sv_managerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="담당자정보"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"/>
+
+        <View
+            android:id="@+id/vi_sv_whiteBox1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_managerInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edge_white_round_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_mangerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/vi_sv_whiteBox1"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="이름"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_mangerName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_mangerName"
+            app:layout_constraintStart_toEndOf="@+id/tv_sv_mangerName"
+            android:text="홍길동"
+            android:textSize="15sp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/tv_sv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_mangerName"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName"
+            android:text="전화번호"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_phone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_phone"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="051-123-1234"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_phone3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_phone"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName"
+            android:text="휴대폰"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_phone4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_phone3"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="010-1234-5678"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_eMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_phone3"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName"
+            android:text="이메일"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_eMail"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="hgd1234@naver.com"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_workInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/vi_sv_whiteBox1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="근무정보"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"/>
+
+        <View
+            android:id="@+id/vi_sv_whiteBox2"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edge_white_round_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_workInfo" />
+
+        <TextView
+            android:id="@+id/tv_sv_companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/vi_sv_whiteBox2"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="기업명"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_companyName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_companyName"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="(주)소나무정보기술"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_locInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_companyName"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="근무지"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_locInfo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_locInfo"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="부산광역시 연제구 고분로 50-1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_locInfo"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="근무기간"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_periodStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_period"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="2022.07.13 ~ "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_periodEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_period"
+            app:layout_constraintStart_toEndOf="@+id/tv_sv_periodStart"
+            android:text="2022.07.13"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_workDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_period"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="근무요일"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_workTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_workDay"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="근무시간"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_workTimeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_workTime"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="09:00 ~ "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_workTimeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_workTime"
+            app:layout_constraintStart_toEndOf="@+id/tv_sv_workTimeStart"
+            android:text="18:00"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_sv_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_workTime"
+            app:layout_constraintStart_toStartOf="@+id/vi_sv_whiteBox1"
+            android:text="급여"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_sv_salaryType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_salary"
+            app:layout_constraintStart_toStartOf="@+id/tv_sv_mangerName2"
+            android:text="일급"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_blue"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edge3"/>
+
+        <TextView
+            android:id="@+id/tv_sv_salary2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_salary"
+            app:layout_constraintStart_toEndOf="@+id/tv_sv_salaryType"
+            android:text="10만원"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_sv_serviceStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/vi_sv_whiteBox2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="서비스단계"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:id="@+id/tv_sv_guide"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@+id/tv_sv_serviceStep"
+            app:layout_constraintStart_toEndOf="@+id/tv_sv_serviceStep"
+            android:text="\?"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/edge3"
+            android:layout_marginLeft="5dp"
+            />
+
+        <View
+            android:id="@+id/vi_sv_whiteBox3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edge_white_square_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sv_serviceStep" />
+
+        <Button
+            android:id="@+id/btn_jp_workFinish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/vi_sv_whiteBox3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="근무종료"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:background="@color/light_blue"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

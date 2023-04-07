@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_scrap"
+        android:enabled="true"
+        android:icon="@drawable/ic_star"
+        android:title="스크랩"/>
+    <item
+        android:id="@+id/tab_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="홈"/>
+    <item
+        android:id="@+id/tab_refresh"
+        android:enabled="true"
+        android:icon="@drawable/ic_refresh"
+        android:title="새로고침"/>
+
+</menu>

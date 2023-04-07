@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.job_introduce">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Job_introduce"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
+        <activity
+            android:name=".login_test"
+            android:exported="true" />
+        <activity
+            android:name=".companylogin_test"
+            android:exported="true" />
+        <activity
+            android:name=".generallogin_test"
+            android:exported="true" />
+        <activity
+            android:name=".aJoinTest"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="2ef955007924551ed7c49f840f3a83cb" />
+
+        <activity android:name=".StartActivity" />
+        <activity android:name=".jobPost.JobPostActivity" />
+        <activity android:name=".generalUser.WorkerServiceActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".myPage.MyPageActivity" />
+        <activity android:name=".partnership.HelperList" />
+        <activity android:name=".login.JoinActivity" />
+        <activity android:name=".jobPost.JobPostListActivity" /> <!-- activity android:name="com.example.job_introduce.MainActivity"/ -->
+        <activity android:name=".jobSeeker.SeekerRegist" />
+        <activity android:name=".jobSeeker.SeekerList" />
+        <activity android:name=".partnership.HelperRegist" />
+        <activity android:name=".partnership.PartnershipInquiryActivity" />
+        <activity android:name=".myPage.ModifyUserInfoActivity" />
+        <activity android:name=".NoticeActivity" />
+        <activity android:name=".companyUser.CompanyLoginActivity" />
+        <activity android:name=".jobPost.RegJobPostActivity" />
+        <activity android:name=".company.CompanyInfo" />
+        <activity android:name=".company.CompanyLocInfoActivity" />
+        <activity android:name=".generalUser.GeneralLoginActivity" />
+    </application>
+
+</manifest>

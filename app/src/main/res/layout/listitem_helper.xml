@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="5dp"
+    android:background="@color/white_gray">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_empty_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="도우미 제목"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_career"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="경력"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_occupation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="업종"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_career"
+        app:layout_constraintTop_toTopOf="@id/tv_career" />
+
+    <TextView
+        android:id="@+id/tv_jobpostlist_loc"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="지역명"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_occupation"
+        app:layout_constraintTop_toTopOf="@id/tv_occupation" />
+
+    <TextView
+        android:id="@+id/tv_workdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="근무 기간"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_career"
+        app:layout_constraintTop_toBottomOf="@+id/tv_career"/>
+
+    <TextView
+        android:id="@+id/tv_worktime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="근무 시간"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_occupation"
+        app:layout_constraintTop_toBottomOf="@+id/tv_occupation"/>
+
+    <TextView
+        android:id="@+id/tv_fee"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="급여"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_jobpostlist_loc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jobpostlist_loc"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

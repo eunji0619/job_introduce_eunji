@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_join"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:id="@+id/sv_join"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <View
+                android:id="@+id/view_first"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_underview1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_all"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/change_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/view_first"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text1"
+                app:layout_constraintTop_toTopOf="@id/tv_text1"/>
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="약관에 전체 동의(선택포함)"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:layout_marginEnd="15dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/cb_all"
+                app:layout_constraintTop_toTopOf="@+id/view_first"
+                app:layout_constraintEnd_toEndOf="@id/view_first"
+                tools:ignore="RtlCompat" />
+
+            <View
+                android:id="@+id/view_line1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/under_border"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text1"
+                app:layout_constraintStart_toStartOf="@+id/cb_all"
+                app:layout_constraintEnd_toEndOf="@id/tv_text1"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_adult"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/change_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                app:layout_constraintStart_toStartOf="@+id/cb_all"
+                app:layout_constraintTop_toTopOf="@+id/tv_text2"/>
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:text="[필수] 만 15세 이상입니다."
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text1"
+                app:layout_constraintTop_toBottomOf="@id/view_line1"
+                app:layout_constraintEnd_toEndOf="@id/tv_text1"
+                tools:ignore="RtlCompat" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_service"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/change_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                app:layout_constraintStart_toStartOf="@+id/cb_adult"
+                app:layout_constraintTop_toTopOf="@id/tv_text3"/>
+
+            <TextView
+                android:id="@+id/tv_text3"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="[필수] 서비스 이용약관 동의"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_text2"
+                app:layout_constraintStart_toStartOf="@+id/tv_text2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text2"
+                tools:ignore="RtlCompat" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_info"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/change_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                app:layout_constraintStart_toStartOf="@+id/cb_service"
+                app:layout_constraintTop_toTopOf="@id/tv_text4"/>
+
+            <TextView
+                android:id="@+id/tv_text4"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:text="[필수] 개인정보 수집 및 이용 동의"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text3"
+                app:layout_constraintEnd_toEndOf="@id/tv_text3"
+                tools:ignore="RtlCompat" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_sms"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/change_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                app:layout_constraintStart_toStartOf="@+id/cb_info"
+                app:layout_constraintTop_toTopOf="@id/tv_text5"/>
+
+            <TextView
+                android:id="@+id/tv_text5"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="[선택] 광고성 정보 수신 동의 (SMS/MMS)"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text4"
+                app:layout_constraintEnd_toEndOf="@id/tv_text4"
+                tools:ignore="RtlCompat" />
+
+            <View
+                android:id="@+id/vi_underview1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/view_first"
+                app:layout_constraintStart_toStartOf="@+id/view_first"
+                app:layout_constraintTop_toBottomOf="@+id/cb_sms"/>
+
+            <TextView
+                android:id="@+id/tv_text6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/gray"
+                android:text="*개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있으며 동의 거부 시에는 회원가입이 불가합니다."
+                app:layout_constraintStart_toStartOf="@+id/view_first"
+                app:layout_constraintEnd_toEndOf="@+id/view_first"
+                app:layout_constraintTop_toBottomOf="@id/vi_underview1"/>
+
+            <View
+                android:id="@+id/view_sec"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_underview2"
+                app:layout_constraintTop_toBottomOf="@id/tv_text6" />
+
+            <TextView
+                android:id="@+id/tv_text7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="15dp"
+                android:text="아이디"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/view_sec"
+                app:layout_constraintTop_toTopOf="@+id/view_sec"/>
+
+            <EditText
+                android:id="@+id/et_userid"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:hint="4~15자 영문, 숫자"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/et_pw"
+                app:layout_constraintStart_toStartOf="@+id/et_repw"
+                app:layout_constraintTop_toTopOf="@+id/tv_text7"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/btn_dupChk"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:text="중복확인"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/a_tempcolor_btn2"
+                app:layout_constraintTop_toTopOf="@+id/et_userid"
+                app:layout_constraintEnd_toEndOf="@+id/view_sec"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/tv_text8"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="비밀번호"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text7"/>
+
+            <EditText
+                android:id="@+id/et_pw"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/transparent_box"
+                android:hint="8~16자 영문, 숫자, 특수기호"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:maxLength="16"
+                app:layout_constraintStart_toStartOf="@+id/et_userid"
+                app:layout_constraintTop_toTopOf="@+id/tv_text8"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/iv_pwsee"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="#00FF0000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_no_eye"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="@id/btn_dupChk"
+                app:layout_constraintTop_toTopOf="@+id/et_pw"
+                android:tag="0"/>
+
+            <TextView
+                android:id="@+id/tv_text9"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="비밀번호 확인"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text8" />
+
+            <EditText
+                android:id="@+id/et_repw"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/transparent_box"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:inputType="textPassword"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="비밀번호 재확인"
+                android:textSize="14sp"
+                android:maxLength="16"
+                app:layout_constraintEnd_toEndOf="@+id/et_pw"
+                app:layout_constraintStart_toEndOf="@+id/tv_text9"
+                app:layout_constraintTop_toTopOf="@+id/tv_text9"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/iv_repwsee"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="#00FF0000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_no_eye"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_pwsee"
+                app:layout_constraintTop_toTopOf="@+id/et_repw"
+                android:tag="0"/>
+
+            <View
+                android:id="@+id/vi_underview2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/view_sec"
+                app:layout_constraintStart_toStartOf="@+id/view_sec"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text9"/>
+
+            <RadioGroup
+                android:id="@+id/rg_usertype"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="@+id/iv_repwsee"
+                app:layout_constraintStart_toStartOf="@+id/tv_text9"
+                app:layout_constraintTop_toBottomOf="@+id/vi_underview2">
+
+                <RadioButton
+                    android:id="@+id/rb_individual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="개인"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_corporation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="기업"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view_thir"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/edge_join"
+                app:layout_constraintEnd_toEndOf="@+id/view_sec"
+                app:layout_constraintStart_toStartOf="@+id/view_sec"
+                app:layout_constraintBottom_toTopOf="@+id/vi_underview3"
+                app:layout_constraintTop_toBottomOf="@id/rg_usertype"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_text10"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_margin="15dp"
+                android:text="사업자번호"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/view_thir"
+                app:layout_constraintTop_toTopOf="@+id/view_thir"/>
+
+            <EditText
+                android:id="@+id/et_businum"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="사업자등록번호 (-제외 번호 입력)"
+                android:inputType="number"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/et_userid"
+                app:layout_constraintTop_toTopOf="@+id/tv_text10"
+                app:layout_constraintEnd_toEndOf="@+id/view_thir"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text11"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="이름"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text10"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="이름을 입력하세요."
+                android:inputType="text"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/et_businum"
+                app:layout_constraintTop_toTopOf="@+id/tv_text11"
+                app:layout_constraintEnd_toEndOf="@+id/et_businum"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text12"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="생년월일"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text11"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text11"/>
+
+            <EditText
+                android:id="@+id/et_birth"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="YYYYMMDD (예.19980302)"
+                android:inputType="number"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/et_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_text12"
+                app:layout_constraintEnd_toEndOf="@+id/et_name"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text13"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="성별"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text12"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text12"/>
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="@+id/et_birth"
+                app:layout_constraintStart_toStartOf="@+id/et_birth"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_text13">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="남성"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="여성"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_text14"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="이메일"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text13"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="email@abcd.com"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/rg_gender"
+                app:layout_constraintTop_toTopOf="@+id/tv_text14"
+                app:layout_constraintEnd_toEndOf="@+id/rg_gender"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tv_text15"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="휴대폰"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text14"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text14"/>
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="'-' 없이 입력하세요."
+                android:inputType="phone"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_send"
+                app:layout_constraintStart_toStartOf="@+id/et_email"
+                app:layout_constraintTop_toTopOf="@+id/tv_text15"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="인증번호전송"
+                android:textSize="14sp"
+                android:background="@drawable/a_tempcolor_btn2"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/btn_dupChk"
+                app:layout_constraintTop_toTopOf="@+id/et_phone"/>
+
+            <TextView
+                android:id="@+id/tv_text16"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="인증번호"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_text15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text15"/>
+
+            <EditText
+                android:id="@+id/et_certifynum"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/transparent_box"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textAlignment="textStart"
+                android:hint="인증번호를 입력하세요."
+                android:inputType="number"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/et_email"
+                app:layout_constraintTop_toTopOf="@+id/tv_text16"
+                app:layout_constraintEnd_toEndOf="@+id/et_phone"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="확인"
+                android:textSize="14sp"
+                android:background="@drawable/a_tempcolor_btn2"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/btn_dupChk"
+                app:layout_constraintTop_toTopOf="@+id/et_certifynum"/>
+
+            <View
+                android:id="@+id/vi_underview3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/view_thir"
+                app:layout_constraintStart_toStartOf="@+id/view_thir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text16"/>
+
+            <TextView
+                android:id="@+id/tv_text17"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:textSize="17sp"
+                android:text="개인정보 유효기간 선택"
+                app:layout_constraintStart_toStartOf="@+id/view_thir"
+                app:layout_constraintEnd_toEndOf="@+id/view_thir"
+                app:layout_constraintTop_toBottomOf="@+id/vi_underview3"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/rg_validity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/tv_text17"
+                app:layout_constraintStart_toStartOf="@+id/tv_text17"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text17">
+
+                <RadioButton
+                    android:id="@+id/rb_1year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1년"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_3year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="3년"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="회원 탈퇴시"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_join"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:background="@drawable/a_tempcolor_btn"
+                android:textStyle="bold"
+                android:text="가입하기"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_validity"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

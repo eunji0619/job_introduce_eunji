@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminNoticeWrite"
+    android:background="@color/white_gray">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_notice_write"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <EditText
+        android:id="@+id/et_adwrite_title"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:hint="제목을 입력해주세요."
+        android:textSize="18dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edge5"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/et_adwrite_content"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="@drawable/edge4"
+        android:hint="내용을 입력해주세요."
+        android:gravity="left"
+        android:textSize="18dp"
+        android:padding="13dp"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="@id/et_adwrite_title"
+        app:layout_constraintStart_toStartOf="@id/et_adwrite_title"
+        app:layout_constraintTop_toBottomOf="@id/et_adwrite_title" />
+
+    <ImageButton
+        android:id="@+id/ib_adwrite_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:srcCompat="@drawable/ic_image"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/et_adwrite_title"
+        app:layout_constraintBottom_toBottomOf="@id/et_adwrite_content"/>
+
+    <TextView
+        android:id="@+id/tv_adwrite_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이미지 첨부"
+        android:textSize="16dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ib_adwrite_image"
+        app:layout_constraintStart_toEndOf="@id/ib_adwrite_image"
+        app:layout_constraintTop_toTopOf="@id/ib_adwrite_image"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <Button
+        android:id="@+id/bt_adwrite_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/a_tempcolor_btn2"
+        android:text="등록하기"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_adwrite_content"
+        app:layout_constraintStart_toStartOf="@+id/et_adwrite_content"
+        app:layout_constraintTop_toBottomOf="@id/et_adwrite_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

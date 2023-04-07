@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_gray"
+        tools:context=".MainActivity">
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar_main"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_topMenuHelper"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edge"
+            android:gravity="center"
+            android:text="도우미"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_topMenuJobInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:clickable="true"
+            android:onClick="nextLayout_helper"/>
+
+        <TextView
+            android:id="@+id/tv_topMenuJobInfo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edge"
+            android:gravity="center"
+            android:text="채용정보"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_topMenuCommunity"
+            app:layout_constraintStart_toEndOf="@+id/tv_topMenuHelper"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:clickable="true"
+            android:onClick="nextLayout_jobList"/>
+
+        <TextView
+            android:id="@+id/tv_topMenuCommunity"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edge"
+            android:gravity="center"
+            android:text="커뮤니티"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tv_topMenuServiceCenter"
+            app:layout_constraintStart_toEndOf="@+id/tv_topMenuJobInfo"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <TextView
+            android:id="@+id/tv_topMenuServiceCenter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edge"
+            android:gravity="center"
+            android:text="고객센터"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_topMenuCommunity"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            />
+
+        <FrameLayout
+            android:id="@+id/fl_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_topMenuServiceCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            android:layout_marginBottom="30dp">
+
+        </FrameLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_main"
+            app:menu="@menu/btm_navi_menu"
+            app:itemBackground="@android:color/white"
+            app:itemIconTint="@color/tab_selection_color"
+            app:itemTextColor="@color/black"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|left"
+        app:headerLayout="@layout/header"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/tab_selection_color"
+        android:background="@color/white"
+        app:menu="@menu/menu_main"
+        tools:ignore="RtlHardcoded" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

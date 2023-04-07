@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_open_regi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:id="@+id/sv_regist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tv_textView1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:text="채용 공고 제목*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_under_border"
+                android:paddingStart="10dp"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView1" />
+
+            <TextView
+                android:id="@+id/tv_textView3"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:text="기업 정보"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/et_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
+            <Button
+                android:id="@+id/bt_modify_com"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="@drawable/ic_write"
+                app:layout_constraintEnd_toEndOf="@+id/et_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView3" />
+
+            <View
+                android:id="@+id/vi_companyinfo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edge_border"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView3" />
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="기업명"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/vi_companyinfo"
+                app:layout_constraintTop_toTopOf="@+id/vi_companyinfo" />
+
+            <TextView
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/transparent_box"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/vi_companyinfo"
+                app:layout_constraintStart_toEndOf="@+id/tv_text1"
+                app:layout_constraintTop_toTopOf="@+id/vi_companyinfo" />
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="기업 형태"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text1"
+                app:layout_constraintTop_toTopOf="@+id/vi_companyinfo" />
+
+            <TextView
+                android:id="@+id/tv_comtype"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/transparent_box"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_name"
+                app:layout_constraintStart_toStartOf="@+id/et_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_text2" />
+
+            <TextView
+                android:id="@+id/tv_text3"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="근무지"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_comtype" />
+
+
+            <TextView
+                android:id="@+id/sp_area"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/transparent_box"
+                app:layout_constraintEnd_toEndOf="@+id/tv_comtype"
+                app:layout_constraintStart_toStartOf="@+id/et_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_comtype" />
+
+            <TextView
+                android:id="@+id/tv_text4"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="상세 주소"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text3" />
+
+            <TextView
+                android:id="@+id/et_addr"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/transparent_box"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/sp_area"
+                app:layout_constraintStart_toStartOf="@+id/sp_area"
+                app:layout_constraintTop_toBottomOf="@+id/sp_area" />
+
+            <TextView
+                android:id="@+id/tv_text5"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="대표자 명"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text4" />
+
+            <TextView
+                android:id="@+id/et_representname"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/transparent_box"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_addr"
+                app:layout_constraintStart_toStartOf="@+id/et_addr"
+                app:layout_constraintTop_toBottomOf="@+id/et_addr" />
+
+            <TextView
+                android:id="@+id/tv_text6"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="전화번호"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text5" />
+
+            <TextView
+                android:id="@+id/sp_phone1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/transparent_box"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="@+id/et_representname"
+                app:layout_constraintStart_toStartOf="@+id/et_representname"
+                app:layout_constraintTop_toTopOf="@+id/tv_text6" />
+
+            <TextView
+                android:id="@+id/tv_text17"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="매출액"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text6" />
+
+            <TextView
+                android:id="@+id/et_sales"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/transparent_box"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/sp_phone1"
+                app:layout_constraintStart_toStartOf="@+id/sp_phone1"
+                app:layout_constraintTop_toTopOf="@+id/tv_text17" />
+
+            <TextView
+                android:id="@+id/tv_text18"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="사원 수"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text17"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text17" />
+
+            <TextView
+                android:id="@+id/et_num_employee"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/transparent_box"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/et_sales"
+                app:layout_constraintTop_toBottomOf="@+id/et_sales" />
+
+
+            <!-- 밑줄 표시용 -->
+
+            <View
+                android:id="@+id/vi_line"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/et_sales"
+                app:layout_constraintStart_toStartOf="@+id/tv_text18"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text18" />
+
+            <!-- 새로운 View -->
+            <TextView
+                android:id="@+id/tv_textView33"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:text="근무 정보*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/vi_companyinfo"
+                app:layout_constraintTop_toBottomOf="@+id/vi_companyinfo" />
+
+            <View
+                android:id="@+id/vi_companyinfo2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                app:layout_constraintBottom_toBottomOf="@+id/vi_viewbottom"
+                app:layout_constraintEnd_toEndOf="@+id/vi_companyinfo"
+                app:layout_constraintStart_toStartOf="@+id/vi_companyinfo"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView33" />
+
+
+            <TextView
+                android:id="@+id/tv_text9"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="담당자 명"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/vi_line"
+                app:layout_constraintTop_toTopOf="@+id/vi_companyinfo2" />
+
+            <EditText
+                android:id="@+id/et_personname"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:paddingStart="10dp"
+                android:padding="5dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/vi_line"
+                app:layout_constraintStart_toStartOf="@id/et_num_employee"
+                app:layout_constraintTop_toTopOf="@+id/tv_text9" />
+
+            <TextView
+                android:id="@+id/tv_text10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="담당자\n휴대폰"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text9" />
+
+            <Spinner
+                android:id="@+id/sp_phone2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text11"
+                app:layout_constraintStart_toStartOf="@+id/et_personname"
+                app:layout_constraintTop_toTopOf="@+id/tv_text10" />
+
+            <TextView
+                android:id="@+id/tv_text11"
+                android:layout_width="15dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/et_phone21"
+                app:layout_constraintStart_toEndOf="@+id/sp_phone2"
+                app:layout_constraintTop_toTopOf="@+id/sp_phone2" />
+
+            <EditText
+                android:id="@+id/et_phone21"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text12"
+                app:layout_constraintStart_toEndOf="@+id/tv_text11"
+                app:layout_constraintTop_toTopOf="@+id/tv_text11" />
+
+            <TextView
+                android:id="@+id/tv_text12"
+                android:layout_width="15dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/et_phone22"
+                app:layout_constraintStart_toEndOf="@+id/et_phone21"
+                app:layout_constraintTop_toTopOf="@+id/et_phone21" />
+
+            <EditText
+                android:id="@+id/et_phone22"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/tv_text12"
+                app:layout_constraintEnd_toEndOf="@+id/et_personname"
+                app:layout_constraintTop_toTopOf="@+id/tv_text12" />
+
+            <TextView
+                android:id="@+id/tv_text20"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="이메일"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text10" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_phone22"
+                app:layout_constraintStart_toStartOf="@id/sp_phone2"
+                app:layout_constraintTop_toTopOf="@+id/tv_text20" />
+
+
+
+            <TextView
+                android:id="@+id/tv_text13"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="근무 기간"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text20"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text20" />
+
+            <TextView
+                android:id="@+id/tv_startworkdate"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:background="@drawable/edit_under_border"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_textView23"
+                app:layout_constraintStart_toStartOf="@+id/tv_text13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text13" />
+
+            <TextView
+                android:id="@+id/tv_textView23"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="~"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_endworkdate"
+                app:layout_constraintStart_toEndOf="@+id/tv_startworkdate"
+                app:layout_constraintTop_toTopOf="@+id/tv_startworkdate" />
+
+            <TextView
+                android:id="@+id/tv_endworkdate"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_phone22"
+                app:layout_constraintStart_toEndOf="@+id/tv_textView23"
+                app:layout_constraintTop_toTopOf="@+id/tv_startworkdate" />
+
+            <TextView
+                android:id="@+id/tv_text14"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="근무 요일"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_text13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_startworkdate" />
+
+
+            <CheckBox
+                android:id="@+id/cb_weekday"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="평일"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cb_weekend"
+                app:layout_constraintStart_toStartOf="@id/tv_text14"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text14" />
+
+            <CheckBox
+                android:id="@+id/cb_weekend"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="주말"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/tv_endworkdate"
+                app:layout_constraintStart_toEndOf="@+id/cb_weekday"
+                app:layout_constraintTop_toTopOf="@+id/cb_weekday" />
+
+            <CheckBox
+                android:id="@+id/cb_mon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="월"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/cb_weekday"
+                app:layout_constraintTop_toBottomOf="@id/cb_weekday" />
+
+            <CheckBox
+                android:id="@+id/cb_tue"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="화"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cb_wed"
+                app:layout_constraintStart_toEndOf="@id/cb_mon"
+                app:layout_constraintTop_toTopOf="@id/cb_mon" />
+
+            <CheckBox
+                android:id="@+id/cb_wed"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="수"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_thu"
+                app:layout_constraintStart_toEndOf="@+id/cb_tue"
+                app:layout_constraintTop_toTopOf="@id/cb_tue" />
+
+            <CheckBox
+                android:id="@+id/cb_thu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="목"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_fri"
+                app:layout_constraintStart_toEndOf="@+id/cb_wed"
+                app:layout_constraintTop_toTopOf="@id/cb_wed" />
+
+            <CheckBox
+                android:id="@+id/cb_fri"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="금"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_sat"
+                app:layout_constraintStart_toEndOf="@+id/cb_thu"
+                app:layout_constraintTop_toTopOf="@id/cb_thu" />
+
+            <CheckBox
+                android:id="@+id/cb_sat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="토"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/cb_sun"
+                app:layout_constraintStart_toEndOf="@+id/cb_fri"
+                app:layout_constraintTop_toTopOf="@id/cb_fri" />
+
+            <CheckBox
+                android:id="@+id/cb_sun"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/selector_checked"
+                android:button="@null"
+                android:text="일"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cb_weekend"
+                app:layout_constraintTop_toTopOf="@id/cb_sat" />
+
+
+            <TextView
+                android:id="@+id/tv_text15"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="근무 시간"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cb_mon"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mon" />
+
+            <!--시작 시간-->
+            <Spinner
+                android:id="@+id/sp_starttime"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text16"
+                app:layout_constraintStart_toStartOf="@+id/tv_text15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text15" />
+
+
+            <TextView
+                android:id="@+id/tv_text16"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="~"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/sp_endtime"
+                app:layout_constraintStart_toEndOf="@+id/sp_starttime"
+                app:layout_constraintTop_toTopOf="@+id/sp_starttime" />
+
+            <!--종료 시간-->
+            <Spinner
+                android:id="@+id/sp_endtime"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edge_border"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@id/cb_sun"
+                app:layout_constraintStart_toEndOf="@+id/tv_text16"
+                app:layout_constraintTop_toTopOf="@+id/sp_starttime" />
+
+            <View
+                android:id="@+id/vi_viewbottom"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@id/vi_companyinfo2"
+                app:layout_constraintStart_toStartOf="@id/vi_companyinfo2"
+                app:layout_constraintTop_toBottomOf="@+id/sp_starttime" />
+
+
+            <TextView
+                android:id="@+id/tv_textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="최종 학력*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/vi_viewbottom"
+                app:layout_constraintTop_toBottomOf="@id/vi_viewbottom" />
+
+            <!--최종 학력-->
+            <Spinner
+                android:id="@+id/sp_final_edu"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                app:layout_constraintEnd_toEndOf="@+id/vi_companyinfo2"
+                app:layout_constraintStart_toStartOf="@id/tv_textView4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView4" />
+
+            <TextView
+                android:id="@+id/tv_textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="경력*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/sp_final_edu"
+                app:layout_constraintTop_toBottomOf="@id/sp_final_edu" />
+
+            <RadioGroup
+                android:id="@+id/rg_careerType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/et_write_ex"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView5">
+
+                <RadioButton
+                    android:id="@+id/rb_irr_experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="경력 무관"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_newcomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="신입"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="경력"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_write_ex"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edge_border"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/sp_final_edu"
+                app:layout_constraintStart_toEndOf="@+id/rg_careerType"
+                app:layout_constraintTop_toTopOf="@+id/rg_careerType" />
+
+            <TextView
+                android:id="@+id/tv_textView20"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="년 이상"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/et_write_ex"
+                app:layout_constraintTop_toTopOf="@+id/et_write_ex" />
+
+            <TextView
+                android:id="@+id/tv_textView6"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="고용형태*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView5"
+                app:layout_constraintTop_toBottomOf="@+id/rg_careerType" />
+
+            <RadioGroup
+                android:id="@+id/rg_emploType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/et_write_ex"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView6">
+
+                <RadioButton
+                    android:id="@+id/rb_permanent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="정규직"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_contract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="계약직"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_shortwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="단기 근무"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+            </RadioGroup>
+
+            <!--
+                        <EditText
+                            android:id="@+id/et_period"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/edge_border"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:hint="수습기간"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:textAlignment="textStart"
+                            app:layout_constraintStart_toStartOf="@+id/et_write_ex"
+                            app:layout_constraintEnd_toEndOf="@+id/et_write_ex"
+                            app:layout_constraintTop_toTopOf="@+id/rg_emploType"
+                            tools:ignore="RtlCompat" />
+                        <TextView
+                            android:id="@+id/tv_textView21"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:text="개월"
+                            android:layout_marginEnd="10dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="@+id/et_period"
+                            app:layout_constraintTop_toTopOf="@+id/et_period"/>
+
+            -->
+
+            <TextView
+                android:id="@+id/tv_textView7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="채용 방식*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rg_emploType"
+                app:layout_constraintTop_toBottomOf="@+id/rg_emploType" />
+
+            <RadioGroup
+                android:id="@+id/rg_recruit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/et_num_recruit"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView7">
+
+                <RadioButton
+                    android:id="@+id/rb_firstcome"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="선착순"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_resume"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="이력서"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_interview"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="면접"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_num_recruit"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edge_border"
+                android:inputType="number"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/rg_emploType"
+                app:layout_constraintStart_toStartOf="@+id/et_write_ex"
+                app:layout_constraintTop_toTopOf="@+id/rg_recruit" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="명"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/et_num_recruit"
+                app:layout_constraintTop_toTopOf="@+id/et_num_recruit" />
+
+            <TextView
+                android:id="@+id/tv_textView8"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="급여*"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rg_recruit"
+                app:layout_constraintTop_toBottomOf="@+id/rg_recruit" />
+
+            <RadioGroup
+                android:id="@+id/rg_money"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/et_num_recruit"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView8">
+
+                <RadioButton
+                    android:id="@+id/rb_hourly"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="시급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_everyday"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="일급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_weekly"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="주급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_monthly"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="월급"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_salary"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_under_border"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/rg_money"
+                app:layout_constraintStart_toStartOf="@+id/rg_money"
+                app:layout_constraintTop_toBottomOf="@+id/rg_money" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="원"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/et_salary"
+                app:layout_constraintTop_toTopOf="@+id/et_salary" />
+
+            <TextView
+                android:id="@+id/tv_textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="채용 상세 정보*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/et_salary"
+                app:layout_constraintTop_toBottomOf="@+id/et_salary" />
+
+            <EditText
+                android:id="@+id/et_detaile_info"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_salary"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView9" />
+
+            <Button
+                android:id="@+id/bt_imagechoice"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edge_border"
+                android:text="이미지 선택"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@+id/et_detaile_info"
+                app:layout_constraintTop_toBottomOf="@id/et_detaile_info" />
+
+            <TextView
+                android:id="@+id/tv_textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="이력서 제출*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/bt_imagechoice"
+                app:layout_constraintTop_toBottomOf="@+id/bt_imagechoice" />
+
+            <RadioGroup
+                android:id="@+id/rg_resume_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/et_detaile_info"
+                app:layout_constraintStart_toEndOf="@+id/tv_textView10"
+                app:layout_constraintTop_toBottomOf="@+id/bt_imagechoice">
+
+                <RadioButton
+                    android:id="@+id/rb_yesresume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="O"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_noresume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="업직종*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView10" />
+
+            <EditText
+                android:id="@+id/et_occupation"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/edit_under_border"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/rg_resume_status"
+                app:layout_constraintStart_toEndOf="@+id/tv_textView11"
+                app:layout_constraintTop_toTopOf="@+id/tv_textView11" />
+
+            <!-- 업직종 선택하는거 어떻게 할지.. Dialog? Spinner? EditText? -->
+            <TextView
+                android:id="@+id/tv_textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="기업 로고"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView11"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView11" />
+
+            <ImageView
+                android:id="@+id/iv_company_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_image"
+                app:layout_constraintStart_toStartOf="@+id/tv_textView13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_textView13" />
+
+            <Button
+                android:id="@+id/bt_choice_logo"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edge_border"
+                android:text="이미지 선택"
+                app:layout_constraintStart_toStartOf="@+id/et_occupation"
+                app:layout_constraintTop_toTopOf="@+id/iv_company_logo" />
+
+            <TextView
+                android:id="@+id/tv_textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="공고 등록 기간*"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/iv_company_logo"
+                app:layout_constraintTop_toBottomOf="@+id/iv_company_logo" />
+
+            <RadioGroup
+                android:id="@+id/rg_regist_period"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/rg_resume_status"
+                app:layout_constraintStart_toStartOf="@id/tv_textView12"
+                app:layout_constraintTop_toBottomOf="@id/tv_textView12">
+
+                <RadioButton
+                    android:id="@+id/rb_oneweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="1주"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_twoweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="2주"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_threeweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="3주"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_onemonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="1개월"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_choiceday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="날짜선택"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_calchoice"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/rg_regist_period"
+                app:layout_constraintStart_toStartOf="@+id/rg_regist_period"
+                app:layout_constraintTop_toBottomOf="@+id/rg_regist_period">
+
+                <TextView
+                    android:id="@+id/tv_regist_period"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/edit_under_border"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bt_regist_calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/bt_regist_calendar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_calendar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_regist_period"
+                    app:layout_constraintTop_toTopOf="@+id/tv_regist_period" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/bt_opening_regist"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/a_tempcolor_btn"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="등록하기"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_calchoice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".generalUser.GeneralLoginActivity"
+    android:background="@color/white"
+    >
+
+    <!--tools:srcCompat="@tools:sample/avatars"-->
+    <ImageView
+        android:id="@+id/iv_login_logo"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/templogo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_generaluser"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/a_tempcolor_border2"
+        android:gravity="center"
+        android:text="일반 회원"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_companyuser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_login_logo" />
+
+    <TextView
+        android:id="@+id/btn_companyuser"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:text="기업 회원"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_generaluser"
+        app:layout_constraintTop_toTopOf="@+id/btn_generaluser"
+        android:clickable="true"
+        android:onClick="nextLayout_comLogin"
+        android:background="@drawable/no_choice_btn"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="아이디"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@id/btn_companyuser"
+        app:layout_constraintStart_toStartOf="@+id/btn_generaluser"
+        app:layout_constraintTop_toBottomOf="@+id/btn_generaluser" />
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="비밀번호"
+        android:paddingStart="10dp"
+        android:layout_marginTop="5dp"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_under_border"
+        app:layout_constraintEnd_toEndOf="@+id/et_id"
+        app:layout_constraintStart_toStartOf="@+id/et_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="359dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/a_tempcolor_btn2"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
+
+    <CheckBox
+        android:id="@+id/cb_autologin"
+        android:layout_width="104dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="15dp"
+        android:text="자동로그인"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_searchid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textSize="15dp"
+        android:text="아이디 찾기"
+        app:layout_constraintStart_toStartOf="@+id/btn_companyuser"
+        app:layout_constraintEnd_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/cb_autologin"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="15dp"
+        android:layout_height="23dp"
+        android:text="|"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_searchid"
+        app:layout_constraintEnd_toStartOf="@+id/tv_searchpw"
+        app:layout_constraintTop_toTopOf="@+id/tv_searchid"/>
+
+    <TextView
+        android:id="@+id/tv_searchpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="비밀번호 찾기"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_searchid"/>
+
+    <TextView
+        android:id="@+id/tv_description3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="계정이 없으세요?"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_companyuser"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가입하기"
+        android:layout_marginStart="10dp"
+        android:textColor="#FF9800"
+        android:clickable="true"
+        android:onClick="nextLayout_join"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_description3"
+        app:layout_constraintTop_toTopOf="@+id/tv_description3" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_snsLogin"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_autologin"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_naver_login"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_kakao_login"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/naver_logo" />
+
+        <ImageView
+            android:id="@+id/iv_kakao_login"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_facebook_login"
+            app:layout_constraintStart_toEndOf="@+id/iv_naver_login"
+            app:layout_constraintTop_toTopOf="@+id/iv_naver_login"
+            app:srcCompat="@drawable/kakao_logo" />
+
+        <ImageView
+            android:id="@+id/iv_facebook_login"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/iv_google_login"
+            app:layout_constraintStart_toEndOf="@+id/iv_kakao_login"
+            app:layout_constraintTop_toTopOf="@+id/iv_kakao_login"
+            app:srcCompat="@drawable/facebook_logo" />
+
+        <ImageView
+            android:id="@+id/iv_google_login"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_naver_login"
+            app:layout_constraintStart_toEndOf="@+id/iv_facebook_login"
+            android:background="@drawable/test"
+            app:srcCompat="@drawable/google_logo"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
